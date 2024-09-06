@@ -1,0 +1,22 @@
+.heading {
+  background-color: wheat;
+}
+
+.note {
+  top: 20;
+  left: 20;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: wheat;
+  padding: 10px;
+  color: brown;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  cursor: pointer;
+}
+
+.note:hover {
+  border: 1px solid black;
+  border-radius: 10px;
+}

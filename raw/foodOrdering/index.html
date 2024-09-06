@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foood Ordering</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="serach__bar">
+        <input
+          onkeyup="debounce(searchRestaurants, 500)()"
+          title="search"
+          type="text"
+          id="searchBar"
+        />
+        <br />
+        <select title="sortBy" onchange="sortRes()" name="sort" id="sort">
+          <option value="" disabled selected>Sort</option>
+          <option value="eta">ETA</option>
+          <option value="rating">Rating</option>
+          <option value="name">Name</option>
+        </select>
+        <select
+          title="filterBy"
+          onchange="filterRestaurants()"
+          name="filter"
+          id="filter"
+        >
+          <option value="" disabled selected>Filter</option>
+          <option value="american">American</option>
+          <option value="indian">Indian</option>
+          <option value="chinese">Chinese</option>
+        </select>
+      </div>
+      <div id="restaurants--container"></div>
+    </div>
+    <script src="./assets/lodash.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

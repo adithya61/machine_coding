@@ -1,0 +1,123 @@
+:root {
+  --btn: grey;
+  ---btn--hover: lightgrey;
+}
+
+body {
+  padding: 0 10px;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > button,
+.addEmployee__btn,
+.updateEmployee__btn {
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 1px 3px black;
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+.header > button:hover {
+  background-color: var(---btn--hover);
+}
+
+.employees {
+  display: flex;
+}
+
+.employees > div {
+  border: 1px solid black;
+  overflow-y: scroll;
+  height: 450px;
+}
+
+.employees__names {
+  width: 30%;
+}
+.employees__information {
+  width: 70%;
+}
+
+.employees__names,
+.employees__information {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.employees__names--title,
+.employees__information--title {
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.employees__names--list {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.employees__names--item {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.employees__names--item:hover,
+.selected {
+  background-color: lightgrey;
+}
+
+.employees__information--list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.employee-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.addEmployee,
+.updateEmployee {
+  opacity: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.addEmployee__create,
+.update__employee {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 350px;
+  padding: 50px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: 5px 5px 100px 10px grey;
+}

@@ -1,0 +1,22 @@
+.app {
+  text-align: center;
+}
+
+.options {
+  list-style: none;
+  background-color: rgb(224, 215, 215);
+  padding: 5px;
+  border: 1px solid black;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.list {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+* {
+    user-select: none;
+}

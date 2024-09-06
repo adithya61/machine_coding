@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "name": "Ayodhya Upchar",
+      "id": "1",
+      "eta": "10mins",
+      "rating": "4.8",
+      "img": "./assets/download.jpeg",
+      "cuisine": ["indian", "american", "chinese"]
+    },
+    {
+      "name": "1954",
+      "id": "2",
+      "eta": "15mins",
+      "rating": "4.4",
+      "img": "./assets/download.jpeg",
+      "cuisine": ["indian", "american"]
+    },
+    {
+      "name": "Toscano",
+      "id": "3",
+      "eta": "20mins",
+      "rating": "4.6",
+      "img": "./assets/download.jpeg",
+      "cuisine": ["indian"]
+    },
+    {
+      "name": "Empire",
+      "id": "4",
+      "eta": "20mins",
+      "rating": "4.9",
+      "img": "./assets/download.jpeg",
+      "cuisine": ["indian", "chinese"]
+    },
+    {
+      "name": "Pizza Hut",
+      "id": "5",
+      "eta": "20mins",
+      "rating": "4.8",
+      "img": "./assets/download.jpeg",
+      "cuisine": ["chinese"]
+    },
+    {
+      "name": "Dominos",
+      "id": "6",
+      "eta": "16mins",
+      "rating": "4.8",
+      "img": "./assets/download.jpeg",
+      "cuisine": ["american"]
+    },
+    {
+      "name": "Farzi",
+      "id": "7",
+      "eta": "13mins",
+      "rating": "4.8",
+      "img": "./assets/download.jpeg",
+      "cuisine": ["indian", "chinese"]
+    },
+    {
+      "name": "Jetlag",
+      "id": "9",
+      "eta": "17mins",
+      "rating": "4.1",
+      "img": "./assets/download.jpeg",
+      "cuisine": ["american", "chinese"]
+    }
+  ]
+}

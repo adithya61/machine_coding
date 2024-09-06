@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links * {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: tomato;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.products-grid {
+  display: grid;
+  gap: 25px;
+}

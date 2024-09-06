@@ -1,0 +1,53 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.notification {
+  width: fit-content;
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: white;
+  border-radius: 8px;
+}
+
+.notification-info {
+  background-color: #295f98;
+}
+
+.notification-success {
+  background-color: #00712d;
+}
+.notification-warning {
+  background-color: #ff9100;
+}
+.notification-error {
+  background-color: red;
+}
+
+.notification-container {
+  position: fixed;
+}
+
+.notification-top-right {
+  top: 20px;
+  right: 20px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 1.5rem;
+}
+
+.close-btn {
+  cursor: pointer;
+  pad: 0.25rem;
+}
+
+.close-btn:hover {
+  fill: antiquewhite;
+}

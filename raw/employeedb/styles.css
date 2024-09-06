@@ -1,0 +1,60 @@
+#list {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 0;
+}
+.employee {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#names {
+  width: 25%;
+  border: 1px solid black;
+}
+#details {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.emp {
+  border: 1px solid gray;
+  padding: 10px;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+  padding: 2px;
+  background: lightgrey;
+}
+li:hover {
+  background-color: whitesmoke;
+}
+.k {
+  opacity: 0;
+}
+
+.k.open {
+  opacity: 1;
+  z-index: 999;
+}
+
+.selected {
+  background-color: white;
+}
+
+.employee-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.addEmp {
+  margin-top: 10px;
+}

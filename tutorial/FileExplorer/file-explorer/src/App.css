@@ -1,0 +1,35 @@
+.sub {
+  display: flex;
+  flex-direction: column;
+}
+
+.folder {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-bottom: 5px;
+  background-color: rgb(215, 209, 209);
+  width: fit-content;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input_container {
+    display: flex;
+    gap: 5px;
+    margin: 5px;
+}

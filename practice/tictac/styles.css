@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 100px);
+}
+
+.grid-item {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+#win-msg {
+  font-size: 45px;
+}
+
+#reset {
+  margin-top: 30px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}

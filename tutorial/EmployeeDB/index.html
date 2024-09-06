@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee DB tutorial</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1>Employee Database</h1>
+        <button class="updateEmployee__btn">update Employee</button>
+        <button class="createEmployee">Add Employee</button>
+      </header>
+    </div>
+
+    <div class="employees">
+      <div class="employees__names">
+        <span class="employees__names--title">Employee name</span>
+        <div class="employees__names--list"></div>
+      </div>
+
+      <div class="employees__information">
+        <span class="employees__information--title">Employee info</span>
+        <div class="employees__information--list"></div>
+      </div>
+    </div>
+
+    <div class="addEmployee">
+      <form class="addEmployee__create">
+        Add employee
+        <div class="employee__info">
+          <input
+            type="text"
+            name="firstName"
+            placeholder="firstName"
+            required
+          />
+          <input type="text" name="lastName" placeholder="lastName" required />
+        </div>
+        <input type="text" name="imageUrl" placeholder="imageUrl" />
+        <input type="submit" class="addEmployee__btn" value="Submit" />
+      </form>
+    </div>
+
+    <div class="updateEmployee">
+      <form class="update__employee">
+        Update employee
+        <div class="employee__info">
+          <input
+            class="update_firstName"
+            type="text"
+            name="firstName"
+            placeholder="firstName"
+          />
+          <input
+            class="update_lastName"
+            type="text"
+            name="lastName"
+            placeholder="lastName"
+          />
+        </div>
+        <input
+          class="update_url"
+          type="text"
+          name="imageUrl"
+          placeholder="imageUrl"
+        />5
+        <input type="button" class="update" value="Submit" />
+      </form>
+    </div>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./script.js"></script>
+  </body>
+</html>

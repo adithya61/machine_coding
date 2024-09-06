@@ -1,0 +1,43 @@
+.parent {
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-content-c {
+  justify-content: center;
+}
+
+.align-items-c {
+  align-items: center;
+}
+
+.round {
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: rgb(216, 212, 212);
+}
+
+.step-header {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dash {
+  height: 5px;
+  width: 100%;
+  background-color: rgb(222, 222, 222);
+}
+
+.active {
+  background-color: rgb(88, 216, 88);
+  border: none;
+}
