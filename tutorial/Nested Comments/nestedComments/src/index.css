@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.comment-utility button:first-child {
+  background-color: #d2e0fb;
+}
+
+.comment-utility button {
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.comment-utility button:not(:first-child) {
+  background-color: #4379f2;
+}
