@@ -1,5 +1,4 @@
-function Comment({ submitComment, onReply, query }) {
-  console.log(query, "comment node");
+function Comment({ handlers, query }) {
   return (
     <div>
       <div className="px-16 comment-container">
@@ -10,43 +9,41 @@ function Comment({ submitComment, onReply, query }) {
           <textarea
             name="comment"
             id="comment"
-            className={` outline p-3 comment-${query.child}`}
+            className={` outline p-3 comment-${query.id}`}
             placeholder="Enter comment"
             rows="6"
             cols="100"
           ></textarea>
           <button
-            onClick={() => submitComment(query.child)}
-            className={`submit-btn-${query.child} p-3 bg-blue-600 text-white rounded-md m-1`}
+            onClick={() => handlers.submitComment(query.id)}
+            className={`submit-btn-${query.id} p-3 bg-blue-600 text-white rounded-md m-1`}
           >
             Submit
           </button>
         </div>
         <div className="comment-utility flex flex-row gap-3">
           <button
-            className={`reply-${query.child}`}
-            onClick={() => onReply(query.child)}
+            className={`reply-${query.id}`}
+            onClick={() => handlers.onReply(query.id)}
             disabled={query.isDisabled}
           >
             Reply
           </button>
-          <button>Upvote</button>
-          <button>Downvote</button>
-          <button>Edit</button>
-          <button>Delete</button>
+          <button onClick={() => handlers.onUpVote(query.id)}>Upvote</button>
+          <button onClick={() => handlers.onDownVote(query.id)}>
+            Downvote
+          </button>
+          <button onClick={() => handlers.onEdit(query.id)}>Edit</button>
+          <button onClick={() => handlers.onDelete(query.id)}>Delete</button>
+          <button>{query.votes}</button>
         </div>
       </div>
       {/* Recursive comment's rendering */}
-      {query.children.length > 0 &&
+      {query.children &&
+        query.children.length > 0 &&
         query.children.map((q) => (
           <div key={q.child} className="ml-28">
-            {
-              <Comment
-                submitComment={submitComment}
-                onReply={onReply}
-                query={q}
-              />
-            }
+            {<Comment handlers={handlers} query={q} />}
           </div>
         ))}
     </div>

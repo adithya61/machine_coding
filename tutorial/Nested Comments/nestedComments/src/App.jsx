@@ -1,87 +1,36 @@
-import { useState } from "react";
 import Comment from "./assets/components/Comment";
+import UseHandlers from "./hooks/UseHandlers";
 
 function App() {
-  const [query, setQuery] = useState([
-    {
-      child: 1,
-      isDisabled: true,
-      children: [],
-    },
+  const { query, handlers } = UseHandlers();
 
-    {
-      child: 2,
-      isDisabled: true,
-      children: [],
-    },
-  ]);
-  const [uniqueId, setUniqueId] = useState(3);
-
-  //   Functions
-  const updateQueryById = (data, id) => {
-    return data.map((node) => {
-      if (node.child == id) return { ...node, isDisabled: false };
-      else if (node.children && node.children.length > 0) {
-        return { ...node, children: updateQueryById(node.children, id) };
-      }
-      return node;
-    });
-  };
-
-  const createQueryById = (data, id) => {
-    return data.map((node) => {
-      if (node.child == id)
-        return {
-          ...node,
-          children: [{ child: uniqueId, isDisabled: true, children: [] }],
-        };
-      else if (node.children && node.children.length > 0) {
-        return { ...node, children: createQueryById(node.children, id) };
-      }
-      return node;
-    });
-  };
-
-  const submitComment = (id) => {
-    const container = document.querySelector(`.comment-${id}`);
-    container.style.backgroundColor = "#F5F5F5";
-    container.setAttribute("readOnly", "true");
-
-    const replyBtn = document.querySelector(`.reply-${id}`);
-    replyBtn.style.backgroundColor = "#4379f2";
-    const updatedQueryObj = updateQueryById(query, id);
-
-    setQuery(updatedQueryObj);
-
-    const commentSubmit = document.querySelector(`.submit-btn-${id}`);
-    commentSubmit.style.display = "none";
-  };
-
-  const onReply = (id) => {
-    const updatedQueryObj = createQueryById(query, id);
-    console.log(updatedQueryObj, "updated obje");
-
-    setQuery(updatedQueryObj);
-
-    setUniqueId((id) => id + 1);
-  };
+  //  ? Render the page.
 
   return (
-    <div>
-      {query.map(
-        (node) => (
-          console.log(node, "node"),
-          console.log(query, "query"),
-          (
-            <Comment
-              key={node.child}
-              submitComment={submitComment}
-              onReply={onReply}
-              query={node}
-            />
-          )
-        )
-      )}
+    <div className="p-5">
+      <div className="flex gap-3">
+        <button
+          onClick={handlers.addCommentBlank}
+          className="  border-2 border-black p-2 bg-blue-300"
+        >
+          Add Comment
+        </button>
+        <button
+          onClick={handlers.sortByDate}
+          className="  border-2 border-black p-2 bg-blue-300"
+        >
+          Sort by Date
+        </button>
+        <button
+          onClick={handlers.sortByVotes}
+          className="  border-2 border-black p-2 bg-blue-300"
+        >
+          Sort by Votes
+        </button>{" "}
+      </div>
+      {query.map((node) => (
+        <Comment key={node.id} handlers={handlers} query={node} />
+      ))}
     </div>
   );
 }

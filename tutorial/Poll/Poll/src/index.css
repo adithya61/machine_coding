@@ -1,1 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+:root {
+  --border-rad: 25px;
+}
+
+li {
+  list-style: none;
+}
+
+progress::-webkit-progress-bar {
+  background: white;
+  border-radius: var(--border-rad);
+}
+
+progress::-webkit-progress-value {
+  border-radius: var(--border-rad);
+}
+progress {
+  border-radius: var(--border-rad);
+}
+
+.results {
+  display: none;
+}

@@ -39,6 +39,9 @@
  * to store to local storage: localStorage(key, JSON.stringify(obj))
  * to get from localstorage and use JSON.parse(localStorage.getItem('key'))
  * element.offSetTop : pixeles form top of the parent element. // same for offSetBottom
+ * const date = new Date();
+ * const date = new Date().toLocaleString();
+ * 
  */
 
 // ~ Questions
@@ -77,7 +80,7 @@
  * employee database
  * useEffect, useThrottle, useMemo
  * auto suggest
- * 
+ *
  *
  */
 
